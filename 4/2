@@ -1,0 +1,21 @@
+# include <stdio.h>
+# include <math.h>
+
+int main()
+{
+float x0, y0;
+printf("x0, y0: ");
+scanf("%f %f", &x0, &y0);
+float r;
+printf("r: ");
+scanf("%f", &r);
+float x, y;
+printf("x, y: ");
+scanf("%f %f", &x, &y);
+
+if ((x0 - x) * (x0 - x) + (y0 - y) * (y0 - y) <= r * r)
+puts("yes");
+else
+puts("no");
+return 0;
+}
