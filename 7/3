@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+int n;
+float p;
+printf("p: ");
+scanf("%f", &p);
+float x0;
+float y0;
+float r;
+printf("x0, y0: ");
+scanf("%f %f", &x0, &y0);
+printf("r: ");
+scanf("%f", &r);
+
+float xmin = x0-r;
+float ymin = y0-r;
+float xmax = x0+r;
+float ymax = y0+r;
+float e;
+
+float y = M_PI;
+int m = 0;
+float x;
+float yst;
+float s= 0;
+        for(;;++n)
+        {
+        x = ((float)rand())/RAND_MAX*2 - 1;
+        yst = ((float)rand())/RAND_MAX*2-1;
+        if((pow(x, 2) + pow(yst, 2)) <= 1)
+                {
+                ++m;
+                }
+
+        s=4.0f*m/n;
+                e = fabsf(y - s);                                                                                                                                                       if(e <= p)
+        {
+        break;
+        }
+
+        }
+
+printf("y:\t");
+printf("%.5f\n", y);
+printf("s:\t");
+printf("%.5f\n", s);
+printf("n:\t");
+printf("%d\n", n);
+printf("m:\t");
+printf("%d\n", m);
+float a = r * 2;
+printf("a:\t");
+printf("%.3f\n", a);
+float ss = (float)pow(a, 2);
+printf("ss:\t");
+printf("%.3f\n", ss);
+float sc = y * ((float)pow(r, 2));
+printf("sc:\t");
+printf("%.3f\n", sc);
+printf("e:\t");
+printf("%.5f\n", e);
+
+
+return 0;
+}
