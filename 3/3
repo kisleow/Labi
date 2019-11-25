@@ -1,0 +1,60 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main ()
+{
+setlocale(LC_ALL, "Rus");
+float a, b, c;
+printf("a: ");
+scanf("%f", &a);
+printf("b: ");
+scanf("%f", &b);
+printf("c: ");
+scanf("%f", &c);
+
+float D = b * b - 4 * a * c;
+
+char bc = '+';
+float bo = b;
+if (b < 0) {
+        bc = '-';
+        bo = -b;
+}
+
+char cc = '+';
+float co = c;
+if (c < 0){
+        co = -c;
+        cc = '-';
+}
+
+printf("eq:\t%.1f * x ^ 2 %c %.1f * x %c %.1f = 0\n", a, bc, bo, cc, co);
+
+
+if (D>0)
+{
+printf("d:\t%.3f\n", D);
+float x1=((-b)-sqrt(D))/(2*a);
+float x2=((-b)+sqrt(D))/(2*a);
+printf("x1:\t%.3f\n", x1);
+printf("x2:\t%.3f\n", x2);
+}
+
+if (D==0)
+{
+printf("d:\t%.3f\n", D);
+float x=-(b/(2*a));
+printf("x:\t%.3f\n", x);
+}
+if (D<0)
+{
+printf("d:\t%.3f\n", D);
+printf("no roots\n");
+}
+
+
+
+return 0;
+}                                                                                                                                                                       
