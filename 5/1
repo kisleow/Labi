@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+        int y=1;
+        int x;
+        printf("x: ");
+        scanf("%d", &x);
+        if (x>=0)
+        {
+                for(int h=1;h<=x; ++h)
+                {
+                y = y*h;
+                }
+                printf("y:\t%d\n", y);
+        }
+        else
+        printf("error\n");
+
+
+return 0;
+
+}
