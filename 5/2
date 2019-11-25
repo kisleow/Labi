@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+        int y=1;
+        int x;
+        printf("x: ");
+        scanf("%d", &x);
+        if (x>=0)
+        {
+        printf("x\tf(x)\n");
+        printf("0\t1\n");
+                for(int h=1;h<=x; ++h)
+                {
+                y = y*h;
+                printf("%d\t", h);
+                printf("%d\n", y);
+                }
+        }
+        else
+        printf("error\n");
+
+
+return 0;
+
+}
+
+
+
+
+
+
