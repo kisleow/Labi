@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+float x;
+int n;
+printf("x: ");
+scanf("%f", &x);
+printf("n: ");
+scanf("%d", &n);
+float y;
+y = 1.0f/x;
+float s=0;
+for(int count=0; count < n; ++count)
+        {
+        s = s + (pow((-1), count)) * (pow((x-1), count));
+        }
+
+printf("y:\t");
+printf("%.5f\n", y);
+printf("s:\t");
+printf("%.5f\n", s);
+float e;
+e = fabsf(y - s);
+
+printf("e:\t");
+printf("%.5f\n", e);
+
+}
